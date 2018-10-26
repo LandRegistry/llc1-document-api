@@ -1,0 +1,13 @@
+# User-specific stuff:
+.idea/
+venv/
+
+# Locally generated python files
+__pycache__/
+.coverage
+.cache/
+.DS_Store
+
+# Eclipse
+.project
+.pydevproject

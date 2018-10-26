@@ -1,0 +1,8 @@
+from llc1_document_api.app import app
+from llc1_document_api.extensions import register_extensions
+from llc1_document_api.blueprints import register_blueprints
+from llc1_document_api.exceptions import register_exception_handlers
+
+register_extensions(app)
+register_exception_handlers(app)
+register_blueprints(app)

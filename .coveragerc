@@ -1,0 +1,6 @@
+[run]
+# Omit boiler plate code
+omit = llc1_document_api/views/general.py
+       llc1_document_api/exceptions.py
+       llc1_document_api/extensions.py
+	   

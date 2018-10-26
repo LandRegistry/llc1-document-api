@@ -1,0 +1,18 @@
+version: '2'
+services:
+  llc1-document-api:
+    container_name: llc1-document-api
+    build: /vagrant/apps/llc1-document-api
+    restart: on-failure
+    ports:
+      - "9999:8080"
+    volumes:
+      - /vagrant/apps/llc1-document-api:/src
+    logging:
+      driver: syslog
+      options:
+        syslog-format: "rfc5424"
+        syslog-address: "tcp://localhost:25826"
+        tag: "{{.Name}}"
+    depends_on:
+      - logstash
